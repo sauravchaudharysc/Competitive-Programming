@@ -41,7 +41,7 @@ when input array is almost sorted, only few elements are misplaced in complete b
 
 #### 4. Merge Sort
 
-**Time Complexity :- ** O(nlogn)
+**Time Complexity :-** O(nlogn)
 
 **Space:-** O(n)
 
