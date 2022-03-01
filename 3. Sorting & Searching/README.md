@@ -2,6 +2,8 @@
 
 <h2 align="center">Sorting</h2>
 
+For sorting codes see Sorting.cpp & searching code see Searching.cpp
+
 #### 1. Bubble Sort
 
 **Best Case & Worst Case:-** O(n^2).
@@ -123,4 +125,71 @@ So, O(n+b)
  If k is the maximum possible value, then d would be O(logb(k)). So overall time complexity is O((n+b) * logb(k)). Which looks more than the time complexity of comparison-based sorting algorithms for a large k. Let us first limit k. Let k <= nc where c is a constant. In that case, the complexity becomes O(nLogb(n)). So if we make b==n then the complexity will be linear. 
 
 -----
+
+
+
+
+
+<h2 align="center">Searching</h2>
+
+#### 1. Linear Search
+
+Complexity :- O(n)
+
+A simple approach is to do a **linear search**, i.e 
+
+- Start from the leftmost element of arr[] and one by one compare x with each element of arr[]
+- If x matches with an element, return the index.
+- If x doesn’t match with any of elements, return -1
+
+-----
+
+#### 2. Binary Search
+
+Complexity :- O(logn) 
+
+**Works only sorted arrays.**
+
+ We basically ignore half of the elements just after one comparison.
+
+1. Compare x with the middle element.
+2. If x matches with the middle element, we return the mid index.
+3. Else If x is greater than the mid element, then x can only lie in the right half subarray after the mid element. So we iterate for the right half.
+4. Else (x is smaller) iterate for the left half.
+
+-----
+
+#### 3. Jump Search 
+
+Complexity : O(√n) 
+
+**Works only sorted arrays.** The basic idea is to check fewer elements (than linear search) by jumping ahead by fixed steps or skipping some elements in place of searching all elements.
+
+**What is the optimal block size to be skipped?** 
+In the worst case, we have to do n/m jumps and if the last checked value is greater than the element to be searched for, we perform m-1 comparisons more for linear search. Therefore the total number of comparisons in the worst case will be ((n/m) + m-1). The value of the function ((n/m) + m-1) will be minimum when m = √n. Therefore, the best step size is m = **√n.**
+
+*Binary Search is better than Jump Search, but Jump search has an advantage that we traverse back only once (Binary Search may require up to O(Log n) jumps, consider a situation where the element to be searched is the smallest element or just bigger than the smallest). So in a system where binary search is costly, we use Jump Search.*
+
+-----
+
+#### 4. Interpolation Search
+
+Time Complexity: O(log2(log2 n)) for the average case, and O(n) for the worst case (when items are distributed exponentially)
+
+The Interpolation Search is an improvement over Binary Search for instances, where the values in a sorted array are uniformly distributed. Binary Search always goes to the middle element to check. On the other hand, interpolation search may go to different locations according to the value of the key being searched. For example, if the value of the key is closer to the last element, interpolation search is likely to start search toward the end side.
+
+**Interpolation algorithm is the same except the above partition logic.**
+
+```c++
+pos = low + (x - arr[low]) *(high - low)/(arr[high] - arr[low])
+```
+
+----
+
+#### 5. Exponential Search 
+
+Exponential Binary Search or Exponential Search is particularly useful for unbounded searches, where size of array is infinite.
+
+**How to find the range where element may be present?** 
+The idea is to start with subarray size 1, compare its last element with x, then try size 2, then 4 and so on. Once we find an index i (after repeated doubling of i), we know that the element must be present between i/2 and i Then we apply binary search between i/2 & i.
 
