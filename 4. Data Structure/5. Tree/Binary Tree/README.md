@@ -162,7 +162,7 @@ It is equal to catalan number.
 T(n) = (2n)! / (n+1)!n!
 ```
 
-*The number of Binary Search Trees (BST) with n nodes is also the same as the number of unlabelled trees. The reason for this is simple, in BST also we can make any key a root, If the root is i’th key in sorted order, then i-1 keys can go on one side, and (n-i) keys can go on another side. *
+*The number of Binary Search Trees (BST) with n nodes is also the same as the number of unlabelled trees. The reason for this is simple, in BST also we can make any key a root, If the root is i’th key in sorted order, then i-1 keys can go on one side, and (n-i) keys can go on another side.*
 
 **How many labeled Binary Trees can be there with n nodes?** 
 To count labeled trees, we can use the above count for unlabeled trees. The idea is simple, every unlabeled tree with n nodes can create n!.
