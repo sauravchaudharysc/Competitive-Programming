@@ -4,7 +4,6 @@ Level Order Traversal II
 
 //Input :- 8 10 1 -1 -1 6 9 -1 -1 7 -1 -1 3 -1 14 13 -1 -1 -1 
 
-
 1st Approach :- We can use queue to do so by making a pair of node and level.
 2nd Approach :- After every level when it ends a NULL is pushed to indicate
 that we need to change the line.Whenever we encounter the NUll. The Previous 

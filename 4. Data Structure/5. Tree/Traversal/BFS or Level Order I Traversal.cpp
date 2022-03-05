@@ -2,7 +2,7 @@
 We can use queue to do so. Or we can simply call it BFS Traversal.
 It complexity is O(N)
 
-Input :- 8 10 1 -1 -1 6 9 -1 -1 7 -1 -1 3 -1 14 13 -1 -1 -1 
+// Input :- 8 10 1 -1 -1 6 9 -1 -1 7 -1 -1 3 -1 14 13 -1 -1 -1 
 
 1.Take the root node. Push it in the Queue.
 2.Pop the front node of queue and push the children of the poped node.
