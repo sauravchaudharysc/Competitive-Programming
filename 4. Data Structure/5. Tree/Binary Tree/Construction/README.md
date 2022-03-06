@@ -24,3 +24,10 @@ The nth-1 element of the post-order gives the root node. You need to search the 
 
 ## 3. Using Pre-Order & Post-Order
 
+Using Pre-Order & Post-Order we get multiple binary tree. But for **Full Binary Tree** we can get unique binary tree.
+
+1. Traverse the pre-order and starting node is the root node.
+2. The successor of the root node in pre-order is the Left Child. 
+3. Find that successor node index i, in the post-order.
+4. Then (low,i) in the post order contains the element of left subtree & (i+1,high-1) in the post order contains the element of right subtree.
+
