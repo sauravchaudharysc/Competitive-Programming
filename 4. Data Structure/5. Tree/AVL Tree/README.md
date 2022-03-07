@@ -12,7 +12,7 @@ AVL tree is a self-balancing Binary Search Tree (BST) where the difference betwe
 
 So whenever balance factor is greater than |1|. Then we apply different rotation and bring the balance factor in the range of -1 to 1.
 
-<img src="avl-tree.png" alt="AVL TREE" style="zoom:50%;" />
+<img src="avl-treee.png" alt="AVL TREE" style="zoom:50%;" />
 
 *Most of the BST operations (e.g., search, max, min, insert, delete.. etc) take O(h) time where h is the height of the BST. The cost of these operations may become O(n) for a skewed Binary tree. If we make sure that height of the tree remains O(Logn) after every insertion and deletion, then we can guarantee an upper bound of O(Logn) for all these operations.*
 
@@ -22,7 +22,7 @@ So whenever balance factor is greater than |1|. Then we apply different rotation
 
 To make sure given Tree remains AVL after every insertion & deletion, we must perform some re-balancing. 
 
-![rotation](rotation.jpg)
+![rotation](rotationn.jpg)
 
 
 
