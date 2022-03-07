@@ -8,3 +8,5 @@
 
 **The above properties of Binary Search Tree provides an ordering among keys so that the operation like searching, finding minimum & maximum can be done fast. Less comparison then binary tree.**
 
+#### Elements can’t repeated in BST.
+
