@@ -14,7 +14,7 @@ Using Morris Traversal, we can traverse the tree without using stack and recursi
 		current=current->right;
 	else
         predecessor=current->left;
-		while (predecessor->right && predecessor->right != current)
+        while (predecessor->right && predecessor->right != current)
                 predecessor = predecessor->right;
     	if(predecessor->right==NULL){
             Print(current->data);
