@@ -15,15 +15,15 @@ Using Morris Traversal, we can traverse the tree without using stack and recursi
 	else
         predecessor=current->left;
         while (predecessor->right && predecessor->right != current)
-                predecessor = predecessor->right;
-    	if(predecessor->right==NULL){
+                 predecessor = predecessor->right;
+        if(predecessor->right==NULL){
             Print(current->data);
-    		predecessor->right=current;
-    		current=current->left
-    	}else{
-    		predecessor->right=NULL;
-    		current=current->right;
-    	}			
+                predecessor->right=current;
+                current=current->left
+            }else{
+                predecessor->right=NULL;
+                current=current->right;
+            }			
 ```
 
 ## InOrder
