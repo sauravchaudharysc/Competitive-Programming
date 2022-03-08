@@ -2,6 +2,8 @@
 
 Using Morris Traversal, we can traverse the tree without using stack and recursion. The idea of Morris Traversal is based on Threaded Binary Tree.
 
+![1](1.png)
+
 ## PreOrder
 
 ```c++
@@ -41,6 +43,8 @@ Using Morris Traversal, we can traverse the tree without using stack and recursi
     		current=current->right;
     	}			
 ```
+
+![2](2.png)
 
 ## PostOrder
 
