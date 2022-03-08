@@ -61,6 +61,7 @@ node* createTreeFromInaAndPre(int *in,int *pre,int s,int e,int &i){
     root->right = createTreeFromInaAndPre(in,pre,idx+1,e,i);
     return root;
 }
+
 int main(){ 
     int in[]= {3,2,8,4,1,6,7,5};
     int pre[]={1,2,3,4,8,5,6,7};
