@@ -149,7 +149,7 @@ if(dist[u]!=INT_MAX && dist[u]+w<dist[v]){
 
 Let’s take a look at an example:
 
-![image-20210222120011704](C:\Users\Saurav Chaudhary\AppData\Roaming\Typora\typora-user-images\image-20210222120011704.png)
+![image-20210222120011704](image-20210222120011704.png)
 
 Here, the **source** vertex is 1. We will find out the shortest distance between the **source** and all the other vertices. We can clearly see that, to reach **vertex 4**, in the worst case, it'll take **(V-1)** edges. Now depending on the order in which the edges are discovered, it might take **(V-1)** times to discover **vertex 4**.
 
@@ -157,7 +157,7 @@ Here, the **source** vertex is 1. We will find out the shortest distance between
 
 A negative cycle can be detected using the Bellman–Ford algorithm by running the algorithm for n rounds. If the last round reduces any distance, the graph contains a negative cycle. For example the following graph : 
 
-![image-20210222122633779](C:\Users\Saurav Chaudhary\AppData\Roaming\Typora\typora-user-images\image-20210222122633779.png)
+![image-20210222122633779](image-20210222122633779.png)
 
 contains a negative cycle 2 -> 3 -> 4 -> 2 with length -4.
 
