@@ -236,7 +236,7 @@ Find an vertex which is affected by negative cycle using the above method. The v
 
 ## Shortest Path Faster Algorithm
 
-The shortest path faster algorithm is based on Bellman-Ford algorithm where every vertex is used to relax its adjacent vertices but in SPF algorithm, a queue of vertices is maintained and a vertex is added to the queue only if that vertex is relaxed. This process repeats until no more vertex can be relaxed. It is similar to bellman-ford but just instead of iterating the outer loop for |N|-1 times it reduce only till queue is empty. To stop preventing duplicate node in queue we maintain a boolean array which keeps track of vertices in queue.
+The shortest path faster algorithm is based on Bellman-Ford algorithm where every vertex is used to relax its adjacent vertices but in SPF algorithm, is often more efficient because does not go through all the edges on each round it chooses the edges to be examined in a more intelligent way. To stop preventing duplicate node in queue we maintain a boolean array which keeps track of vertices in queue.
 
 ```cpp
  bool inQueue[V + 1] = { false }; 
@@ -250,8 +250,6 @@ The shortest path faster algorithm is based on Bellman-Ford algorithm where ever
      - If d[v] > d[u] + weight of edge(u, v)
      - d[v] = d[u] + weight of edge(u, v)
      - If vertex v is not present in Queue, then push the vertex v into the Queue.
-
-> It is modification of bellman-ford where the outer loop which iterates for vertices-1 times now will only iterate for the number of vertices relaxed.
 
 ## Floyd-Warshall Algorithm
 
