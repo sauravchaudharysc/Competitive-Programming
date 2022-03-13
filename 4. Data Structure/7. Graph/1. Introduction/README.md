@@ -8,10 +8,12 @@ A path is cyclic if the start and end node are same. A path is simple if each no
 
 **Connectivity**
 A graph is connected if there is a path between any two nodes. The following graph is connected :
-															![image-20210221125825352](image-20210221125825352.png)
+
+![image-20210221125825352](image-20210221125825352.png)
 
 The following graph is not connected because it is not possible to get to node 4 from any other node.
-															 ![image-20210221125908530](image-20210221125908530.png)
+
+![image-20210221125908530](image-20210221125908530.png)
 
 **Components**
 The connected parts of a graph are called as components.
@@ -21,11 +23,13 @@ A **tree** is a connected acyclic graph that consists of n nodes and n-1 edges. 
 
 **Directed  Graph**
 A graph is directed if the edges can be traversed in one direction only. For example, the following graph is directed:
-													 ![image-20210221133104239](image-20210221133104239.png)
+
+![image-20210221133104239](image-20210221133104239.png)
 
 **Weighted Graph**
 In a weighted graph, each edge is assigned a weight. The weights are often interpreted as edge lengths. For example, the following graph is weighted:
-                                      			![image-20210221133200049](C:\Users\Saurav Chaudhary\AppData\Roaming\Typora\typora-user-images\image-20210221133200049.png)
+
+![image-20210221133200049](image-20210221133200049.png)
 ![image-20210221133322557](image-20210221133322557.png)
 
 **Neighbors & Degrees**
