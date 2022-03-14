@@ -8,14 +8,15 @@ Using Morris Traversal, we can traverse the tree without using stack and recursi
 
 ```c++
 1. Initialize current as root
-2. While current is not null
+2. While current is not NULL
 	if(current->left==NULL)
 		Print(current->data);
 		current=current->right;
 	else
-        predecessor=current->left;
+        predecessor=current->left; //Inorder Predecessor
         while (predecessor->right && predecessor->right != current)
                  predecessor = predecessor->right;
+		//Print & make Current as right child of inorder predecessor
         if(predecessor->right==NULL){
             Print(current->data);
                 predecessor->right=current;
@@ -35,7 +36,9 @@ Using Morris Traversal, we can traverse the tree without using stack and recursi
 		Print(current->data);
 		current=current->right;
 	else
-    	predecessor=inorderPredecessor(current)
+    	predecessor=current->left; //Inorder Predecessor
+        while (predecessor->right && predecessor->right != current)
+                 predecessor = predecessor->right;
     	if(predecessor->right==NULL){
     		predecessor->right=current;
     		current=current->left
@@ -46,44 +49,31 @@ Using Morris Traversal, we can traverse the tree without using stack and recursi
     	}			
 ```
 
-![2](2.png)
+
+
+<hr>
 
 ## PostOrder
 
 ```c++
-1. Create a dummy node and make the root as it's left child.
-2. Initialize current with dummy node
-2. While current is not null
-	if(current->left==NULL)
-		current=current->right;
+1. Initialize current as root
+2. Initialize a vector
+2. While current is not NULL
+	if(current->right==NULL)
+		vector.push(current->data);
+		current=current->left;
 	else
-    	predecessor=inorderPredecessor(current)
-    	if(predecessor->right==NULL){
-    		predecessor->right=current;
-    		current=current->left
-    	}else{
-    		predecessor->right=NULL;
-    		succesor=current;
-            current = current->left;
-            prev = NULL;     
-            // Traverse along the right subtree 
-            // to the right-most child
-            while (current != NULL){
-                    temp = current->right;
-                    current->right = prev;
-                    prev = current;
-                    current = temp;
-            }
-            // Traverse back to current's left child node
-            while (prev != NULL){
-                    cout << prev->data << " ";
-                    temp = prev->right;
-                    prev->right = current;
-                    current = prev;
-                    prev = temp;
-            }
-            current = succ;
-            current = current->right;
-		
+        successor=current->right; //Inorder sucessor
+        while (succcessor->left && successor->left != current)
+                 successor = successor->left;
+		//Print & make Current as left child of inorder successor
+        if(successor->left==NULL){
+            vector.push(current->data);
+                successor->left=current;
+                current=current->right
+            }else{
+                successor->left=NULL;
+                current=current->left;
+            }			
 ```
 
